@@ -20,7 +20,7 @@ if not os.path.exists(personPath):
     os.makedirs(personPath)
 
 cap = cv2.VideoCapture(0)
-#cap = cv2.VideoCapture('Jhona.mp4')
+#cap = cv2.VideoCapture('Riki.mp4')
 faceClassif=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 count=0
 while True:
