@@ -1,9 +1,19 @@
 import cv2
 import os
 import imutils
+import json
+
+nombres = "nombre.json"
+numPer=0;
+with open(nombres, "r") as archivoConfiguracion:
+    datosConfiguracion = json.load(archivoConfiguracion)
+    keyPer=str(numPer)
+    nombrePersona = datosConfiguracion.get(keyPer, "")
 
 
-name = input('Inserte el nombre de la persona: ')
+
+name = nombrePersona
+
 
 #El nombre del video debe ser acompañado del la extenxion .mp4
 # Ejemplo.mp4
@@ -18,6 +28,7 @@ personPath = dataPath +'\\'+ personaName
 if not os.path.exists(personPath):
     print('Carpeta creada: ',personPath)
     os.makedirs(personPath)
+
 
 cap = cv2.VideoCapture(0)
 #cap = cv2.VideoCapture('Riki.mp4')
@@ -40,9 +51,11 @@ while True:
 		cv2.imwrite(personPath + '/rotro_{}.jpg'.format(count),rostro)
 		count = count + 1
 	cv2.imshow('frame',frame)
+	
 
+ 
 	k =  cv2.waitKey(1)
-	if k == 27 or count >= 400: #Numero de Rostros capturaados
+	if k == 27 or count >= 50: #Numero de Rostros capturaados
 		break
 
 cap.release()
