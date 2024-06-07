@@ -23,7 +23,9 @@ personaName= name + ' !DESAPARECIDO!'
 
 #Almacenar las fotos
 #La direcion cambia segun el lugar de almacenamiento
-dataPath='C:\\Users\\asus\\OneDrive\\Escritorio\\Vision-artificial\\Data' 
+rutPrincipal = os.path.dirname(__file__)
+
+dataPath=os.path.join(rutPrincipal,"Data")
 personPath = dataPath +'\\'+ personaName
 if not os.path.exists(personPath):
     print('Carpeta creada: ',personPath)
@@ -50,9 +52,8 @@ while True:
 		rostro = cv2.resize(rostro,(150,150),interpolation=cv2.INTER_CUBIC)
 		cv2.imwrite(personPath + '/rotro_{}.jpg'.format(count),rostro)
 		count = count + 1
-	cv2.imshow('frame',frame)
+	cv2.imshow('Capturador de rostros',frame)
 	
-
  
 	k =  cv2.waitKey(1)
 	if k == 27 or count >= 50: #Numero de Rostros capturaados

@@ -1,9 +1,13 @@
 import tkinter as tk
+from tkinter import Label
 import subprocess
 import json
+import os
 
 personaDesaparecida = ""
 cantPersonas=0;
+anchoVentana = 300
+altoVenteana = 400
 
 nombre = "nombre.json"
 
@@ -56,10 +60,6 @@ ventana.geometry("300x400+200+30")
 ventana.title("Sistema de Busqueda de Personas")
 ventana.resizable(width=False,height=False)
 
-anchoVentana = 300
-altoVenteana = 400
-
-centrarVentana(ventana,anchoVentana,altoVenteana)
 frame = tk.Frame(ventana)
 frame.pack(expand=True)
 #botones
@@ -71,8 +71,9 @@ boton2 = tk.Button(frame,text="Entrenar Modelo",bg="#D4DCDA",cursor="hand2",
                   width=15, height=3,font=("Arial",12,"bold"),command=entrenarModelo)
 boton2.pack(pady=10)
 
-boton2 = tk.Button(frame,text="Buscar persona",bg="#D4DCDA",cursor="hand2",
-                  width=15, height=3,font=("Arial",12,"bold"), command=buscarPersona)
+boton2 = tk.Button(frame,text="Buscar persona (Finaliza ESC)",bg="#D4DCDA",cursor="hand2",
+                  width=15, height=3,font=("Arial",12,"bold"),wraplength=180,  command=buscarPersona)
 boton2.pack(pady=10)
 
+centrarVentana(ventana,anchoVentana,altoVenteana)
 ventana.mainloop()

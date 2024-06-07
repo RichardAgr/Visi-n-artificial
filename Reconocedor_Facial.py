@@ -1,7 +1,8 @@
 import cv2
 import os
 
-dataPath = 'C:\\Users\\asus\\OneDrive\\Escritorio\\Vision-artificial\\Data' #Cambia a la ruta donde hayas almacenado Data
+rutPrincipal = os.path.dirname(__file__)
+dataPath=os.path.join(rutPrincipal,"Data") #Cambia a la ruta donde hayas almacenado Data
 imagePaths = os.listdir(dataPath)
 print('imagePaths=',imagePaths)
 
