@@ -13,7 +13,7 @@ personaName= name + ' !DESAPARECIDO!'
 
 #Almacenar las fotos
 #La direcion cambia segun el lugar de almacenamiento
-dataPath='C:\\Users\\asus\\OneDrive\\Escritorio\\Visi-n-artificial\\Data' 
+dataPath='C:\\Users\\asus\\OneDrive\\Escritorio\\Vision-artificial\\Data' 
 personPath = dataPath +'\\'+ personaName
 if not os.path.exists(personPath):
     print('Carpeta creada: ',personPath)

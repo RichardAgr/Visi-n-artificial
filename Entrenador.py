@@ -2,7 +2,7 @@ import cv2
 import os
 import numpy as np
 
-dataPath ='C:\\Users\\asus\\OneDrive\\Escritorio\\Visi-n-artificial\\Data' 
+dataPath ='C:\\Users\\asus\\OneDrive\\Escritorio\\Vision-artificial\\Data' 
 #Listado de carpetas
 peopleList = os.listdir(dataPath)
 print('Lista de personas: ', peopleList)
