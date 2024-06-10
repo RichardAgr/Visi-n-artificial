@@ -56,7 +56,7 @@ while True:
 	
  
 	k =  cv2.waitKey(1)
-	if k == 27 or count >= 50: #Numero de Rostros capturaados
+	if k == 27 or count >= 400: #Numero de Rostros capturaados
 		break
 
 cap.release()
