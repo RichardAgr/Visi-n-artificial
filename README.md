@@ -38,9 +38,11 @@ este error puede aparecer al momento de ejecutar las clases: **Capturador_Rostro
 
 Esto a que cambiar en el codigo:
 **Capturador_Rostros.py**
+
 ![3](https://github.com/RichardAgr/Vision-artificial/assets/136004365/895c70c2-e206-48be-939f-8adb3a38806c)
 
 ** Reconocedor_Facial.py**
+
 ![4](https://github.com/RichardAgr/Vision-artificial/assets/136004365/56432ceb-e9f7-4805-8999-ff2b05b8dfec)
 
 Otro posible error que pueda suceder es cuando no se tiene actualizado el openCv, este proyecto esta trabajando con una version de opencv 4.9.0.
@@ -59,6 +61,7 @@ Para actualizar el openCv se ejecuta el siguiente comando en cmd:
 </p>
 
 #La interfaz
+
 ![5](https://github.com/RichardAgr/Vision-artificial/assets/136004365/3909d1c6-8794-4820-9f7c-26b598e471c7)
 
 Para ejecutar: 
